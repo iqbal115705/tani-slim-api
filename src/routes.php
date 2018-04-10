@@ -69,7 +69,7 @@ $app->put("/books/{id}", function (Request $request, Response $response, $args){
 
     if($stmt->execute($data))
        return $response->withJson(["status" => "success", "data" => "1"], 200);
-    
+
     return $response->withJson(["status" => "failed", "data" => "0"], 200);
 });
 
@@ -88,3 +88,13 @@ $app->delete("/books/{id}", function (Request $request, Response $response, $arg
 
     return $response->withJson(["status" => "failed", "data" => "0"], 200);
 });
+
+// membuat middleware
+$cekAPIKey = function($request, $response, $next){
+     // ini middleware untuk cek apikey
+};
+
+// menambahkan middleware ke route
+$app->get('/books', function ($request, $response) {
+       // ...
+})->add(cekAPIKey());

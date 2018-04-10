@@ -23,6 +23,6 @@ return [
          'pass' => '',
          'dbname' => 'tokobuku',
          'driver' => 'mysql'
-       ]
+      ],
     ],
 ];

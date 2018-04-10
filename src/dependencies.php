@@ -21,7 +21,7 @@ $container['logger'] = function ($c) {
 //database
 $container['db'] = function ($c)
 {
-   $setting = $c->get('settings')['db'];
+   $settings = $c->get('settings')['db'];
    $server = $settings['driver'].":host=".$settings['host'].";dbname=".$settings['dbname'];
    $conn = new PDO($server, $settings["user"], $settings["pass"]);
    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
