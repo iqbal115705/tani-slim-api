@@ -16,7 +16,6 @@ return [
             'level' => \Monolog\Logger::DEBUG,
         ],
 
-
        //database settings
        'db' => [
          'host' => 'localhost',
